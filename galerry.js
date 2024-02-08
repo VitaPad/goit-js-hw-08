@@ -83,7 +83,7 @@ function imgClick(event) {
   }
   const imgSourse = event.target.dataset.source;
   const imgDescription = event.target.alt;
-  const modalImage = `<img src="${imgSourse}" alt="${imgDescription}" width="1280" height="640"></img> `;
+  const modalImage = `<img src="${imgSourse}" alt="${imgDescription}"></img> `;
 
   const modal = document.createElement("div");
   modal.classList.add("modal");

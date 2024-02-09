@@ -81,15 +81,20 @@ function imgClick(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  const imgSourse = event.target.dataset.source;
+  const imgSource = event.target.dataset.source;
   const imgDescription = event.target.alt;
-  const modalImage = `<img src="${imgSourse}" alt="${imgDescription}"></img> `;
 
-  const modal = document.createElement("div");
+  const modalImage = basicLightbox.create(
+    `<div class="modal"><img src="${imgSource}" alt="${imgDescription}" width="1280" height="900"/></div>`
+  );
+  modalImage.show();
+}
+
+/*    const modalImage = `<img src="${imgSourse}" alt="${imgDescription}"></img> `; */
+/*  const modal = document.createElement("div");
   modal.classList.add("modal");
   modal.innerHTML = modalImage;
-  document.body.appendChild(modal);
-}
+  document.body.appendChild(modal); */
 
 /* const imgClick = event.target.dataset.original;
 output.innerHTML = `<img scr="${imgClick}" alt="${description}"></img>`;
